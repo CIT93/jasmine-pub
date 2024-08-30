@@ -21,8 +21,21 @@ function determineHouseHoldPts(numberInHousehold) {
 let carbonFootprintPoints = 0;
 //const numberInHousehold = 3;
 
+function determineHomeSizePts(sizeOfHouse) {
+    if (sizeOfHouse === "large") {
+        carbonFootprintPoints = carbonFootprintPoints + 10;
+    } else if (sizeOfHouse === "medium-sized") {
+        carbonFootprintPoints = carbonFootprintPoints + 7;
+    } else if (sizeOfHouse === "small") {
+        carbonFootprintPoints = carbonFootprintPoints + 4;
+    } else if (sizeOfHouse === "apartment") {
+        carbonFootprintPoints = carbonFootprintPoints + 2;
+    }
+    console.log(`Based on the ${sizeOfHouse} home the points would be ${carbonFootprintPoints}`);
+}
 
 // global scope
 
-determineHouseHoldPts(3);
+//determineHouseHoldPts(3);
 determineHouseHoldPts(4);
+determineHomeSizePts("medium-sized");
