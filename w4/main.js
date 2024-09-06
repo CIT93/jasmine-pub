@@ -43,7 +43,15 @@ function start(houseHoldMembers, houseSize) {
 }
 
 function displayOutput() {
-    
+    for (arr of cfpData){
+        console.log(arr);
+        const output = document.getElementById("output");
+        const newP = document.createElement("p");
+        newP.textContent = `With ${arr[0]} members you get ${arr[2]} points and with a ${arr[1]} home you get ${arr[3]} points. So your total it ${arr[4]}`
+        //newP.textContent = `Judging from the data, with ${arr[0]} members your points are ${arr[3]}`
+        //newP.textContent = `Carbon Footprint total is ${arr[4]}`
+        output.appendChild(newP)
+    }
 }
 
 start(5, "apt");
