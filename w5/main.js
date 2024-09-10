@@ -47,21 +47,21 @@ function start(houseHoldMembers, houseSize) {
   ]);
 }
 
-function displayOutput() {
-  for (arr of cfpData) {
-    const output = document.getElementById("output");
-    const newH2 = document.createElement("h2");
-    newH2.textContent = `Carbon Footprint ${arr[4]}`;
-    const newH3 = document.createElement("h3");
-    newH3.textContent = `Based on the number in and size of home`;
-    const newP = document.createElement("p");
-    newP.textContent = `This number is based on the number of people in the house of ${arr[0]} (score: ${arr[3]}),`;
-    newP.textContent += ` and a ${arr[1]} size of home (score:${arr[2]}).`;
-    output.appendChild(newH2);
-    output.appendChild(newH3);
-    output.appendChild(newP);
-  }
-}
+// function displayOutput() {
+//   for (arr of cfpData) {
+//     const output = document.getElementById("output");
+//     const newH2 = document.createElement("h2");
+//     newH2.textContent = `Carbon Footprint ${arr[4]}`;
+//     const newH3 = document.createElement("h3");
+//     newH3.textContent = `Based on the number in and size of home`;
+//     const newP = document.createElement("p");
+//     newP.textContent = `This number is based on the number of people in the house of ${arr[0]} (score: ${arr[3]}),`;
+//     newP.textContent += ` and a ${arr[1]} size of home (score:${arr[2]}).`;
+//     output.appendChild(newH2);
+//     output.appendChild(newH3);
+//     output.appendChild(newP);
+//   }
+// }
 
 start(5, "apt");
 start(4, "large");
@@ -104,6 +104,28 @@ for (let i = 0; i < 5; i++ ) {
 
 // By switching 0 to 1 to start with 1 and switch out 5 with 16
 for (let i = 1; i < 16; i++ ) {
-    // block scope
     console.log(i);
+}
+
+// count backwards
+// i didn't know how to fix this
+for (let i = 6; i > 0; i-- ) {
+    console.log(i);
+}
+
+//refactore
+function displayOutput() {
+  for (let i = 0; i < cfpData.length; i++) {
+    const output = document.getElementById("output");
+    const newH2 = document.createElement("h2");
+    newH2.textContent = `Carbon Footprint ${cfpData[i][4]}`;
+    //   const newH3 = document.createElement("h3");
+    //   newH3.textContent = `Based on the number in and size of home`;
+    //   const newP = document.createElement("p");
+    //   newP.textContent = `This number is based on the number of people in the house of ${arr[0]} (score: ${arr[3]}),`;
+    //   newP.textContent += ` and a ${arr[1]} size of home (score:${arr[2]}).`;
+    output.appendChild(newH2);
+    //   output.appendChild(newH3);
+    //   output.appendChild(newP);
+  }
 }
