@@ -93,3 +93,17 @@ start(7, "medium");
 start(7, "large");
 
 displayOutput();
+
+// for (intialization; condition; afterthought)
+//  statement
+
+for (let i = 0; i < 5; i++ ) {
+    // block scope
+    console.log(i);
+}
+
+// By switching 0 to 1 to start with 1 and switch out 5 with 16
+for (let i = 1; i < 16; i++ ) {
+    // block scope
+    console.log(i);
+}
